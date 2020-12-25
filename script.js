@@ -4,10 +4,9 @@ function computerPlay() {
     return options[mix];
 }
 
-
-
 let playerScore = 0;
 let computerScore = 0;
+
 
 function playRound(playerSelection, computerSelection) {
     const rockXScissor = "Rock Beats Scissor.";
@@ -22,36 +21,36 @@ function playRound(playerSelection, computerSelection) {
 
         if (playerSelection == "paper" && computerSelection == "rock") {
             playerScore +=1;
-            return `you played ${playerSelection} and the A.I. played ${computerPlay()} \n` + win + paperXRock;
+            return `you played ${playerSelection} and the A.I. played ${computerSelection} \n` + win + paperXRock;
        
         } else if (playerSelection == "paper" && computerSelection == "scissor") {
             computerScore += 1;
-            return `you played ${playerSelection} and the A.I. played ${computerPlay()} \n` + loss + scissorXPaper;
+            return `you played ${playerSelection} and the A.I. played ${computerSelection} \n` + loss + scissorXPaper;
         
         } else if (playerSelection == "paper" && computerSelection == "paper") {
-            return `you played ${playerSelection} and the A.I. played ${computerPlay()} \n` + tie + paperXpaper;
+            return `you played ${playerSelection} and the A.I. played ${computerSelection} \n` + tie + paperXpaper;
        
         } else if (playerSelection == "rock" && computerSelection == "scissor") {
             playerScore +=1;
-            return `you played ${playerSelection} and the A.I. played ${computerPlay()} \n` + win + rockXScissor;
+            return `you played ${playerSelection} and the A.I. played ${computerSelection} \n` + win + rockXScissor;
         
         } else if (playerSelection == "rock" && computerSelection == "paper") {
             computerScore += 1;
-            return `you played ${playerSelection} and the A.I. played ${computerPlay()} \n` + loss + paperXRock;
+            return `you played ${playerSelection} and the A.I. played ${computerSelection} \n` + loss + paperXRock;
         
         } else if (playerSelection == "rock" && computerSelection == "rock") {
-            return `you played ${playerSelection} and the A.I. played ${computerPlay()} \n` + tie + rockXRock;
+            return `you played ${playerSelection} and the A.I. played ${computerSelection} \n` + tie + rockXRock;
         
         } else if (playerSelection == "scissors" && computerSelection == "scissor") {
-            return `you played ${playerSelection} and the A.I. played ${computerPlay()} \n` + tie + scissorXScissor;
+            return `you played ${playerSelection} and the A.I. played ${computerSelection} \n` + tie + scissorXScissor;
 
         } else if (playerSelection == "scissors" && computerSelection == "paper") {
             playerScore +=1;
-            return `you played ${playerSelection} and the A.I. played ${computerPlay()} \n` + win + scissorXPaper;
+            return `you played ${playerSelection} and the A.I. played ${computerSelection} \n` + win + scissorXPaper;
 
         } else if (playerSelection == "scissors" && computerSelection == "rock") {
             computerScore += 1;
-            return `you played ${playerSelection} and the A.I. played ${computerPlay()} \n` + loss + rockXScissor;
+            return `you played ${playerSelection} and the A.I. played ${computerSelection} \n` + loss + rockXScissor;
         }
     
 }
