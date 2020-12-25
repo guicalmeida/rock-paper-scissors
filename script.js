@@ -23,14 +23,14 @@ function playRound(playerSelection, computerSelection) {
             playerScore +=1;
             return `you played ${playerSelection} and the A.I. played ${computerSelection} \n` + win + paperXRock;
        
-        } else if (playerSelection == "paper" && computerSelection == "scissor") {
+        } else if (playerSelection == "paper" && computerSelection == "scissors") {
             computerScore += 1;
             return `you played ${playerSelection} and the A.I. played ${computerSelection} \n` + loss + scissorXPaper;
         
         } else if (playerSelection == "paper" && computerSelection == "paper") {
             return `you played ${playerSelection} and the A.I. played ${computerSelection} \n` + tie + paperXpaper;
        
-        } else if (playerSelection == "rock" && computerSelection == "scissor") {
+        } else if (playerSelection == "rock" && computerSelection == "scissors") {
             playerScore +=1;
             return `you played ${playerSelection} and the A.I. played ${computerSelection} \n` + win + rockXScissor;
         
@@ -41,7 +41,7 @@ function playRound(playerSelection, computerSelection) {
         } else if (playerSelection == "rock" && computerSelection == "rock") {
             return `you played ${playerSelection} and the A.I. played ${computerSelection} \n` + tie + rockXRock;
         
-        } else if (playerSelection == "scissors" && computerSelection == "scissor") {
+        } else if (playerSelection == "scissors" && computerSelection == "scissors") {
             return `you played ${playerSelection} and the A.I. played ${computerSelection} \n` + tie + scissorXScissor;
 
         } else if (playerSelection == "scissors" && computerSelection == "paper") {
@@ -57,7 +57,13 @@ function playRound(playerSelection, computerSelection) {
 
 
 while (playerScore !== 5 && computerScore !== 5) {
-    console.log(playRound("rock", computerPlay()));
+    console.log(playRound("paper", computerPlay()));
     console.log("your score: " + playerScore);
     console.log("A.I. score: " + computerScore);
+    if (playerScore == 5) {
+        console.log("%cYou Win the Game!", "color:red; font-size: 30px");
+    }
+    else if (computerScore == 5) {
+        console.log("%cYou Lost the Game!", "color:blue; font-size: 30px");
+    }
 }
