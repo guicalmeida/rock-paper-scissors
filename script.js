@@ -22,8 +22,12 @@ function playRound(playerSelection, computerSelection) {
 
 
 while (playerScore !== 5 && computerScore !== 5) {
-    let answer = prompt("rock, paper, scissors?");
-    let player = answer.toLowerCase();
+    let player;
+    let answer;
+    while ((player !== "rock") && (player !== "paper") && (player !== "scissors")) {
+        answer = prompt("rock, paper, scissors?");
+        player = answer.toLowerCase();
+       }
     console.log(playRound(player, computerPlay()));
     console.log ("your score: " + playerScore);
     console.log ("A.I. score: " + computerScore);
